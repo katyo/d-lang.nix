@@ -7,8 +7,8 @@ stdenv.mkDerivation rec {
     owner = "adamdruppe";
     repo = "adrdox";
     #rev = "v${version}";
-    rev = "769762b";
-    sha256 = "03dn46bxl3x67cmmgv7nzy95qqrf949dxw5f0vph62dfmwza7vp4";
+    rev = "275699b";
+    sha256 = "0jvccirwx1kbpzs09f17pn06xrjmbfr83zcid8nsw6xs2cdiynjq";
   };
 
   buildInputs = [
