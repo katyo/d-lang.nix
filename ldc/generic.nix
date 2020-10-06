@@ -25,6 +25,10 @@ stdenv.mkDerivation rec {
     sha256 = ldcSha256;
   };
 
+  patches = [
+    ./druntime-wasm.patch
+  ];
+
   # https://issues.dlang.org/show_bug.cgi?id=19553
   hardeningDisable = [ "fortify" ];
 
