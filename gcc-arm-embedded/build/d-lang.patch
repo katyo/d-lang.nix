@@ -1,0 +1,55 @@
+diff --git a/build-toolchain.sh b/build-toolchain.sh
+index 3aa9f71..4beaf88 100755
+--- a/build-toolchain.sh
++++ b/build-toolchain.sh
+@@ -421,7 +421,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
+         --mandir=$INSTALLDIR_NATIVE_DOC/man \
+         --htmldir=$INSTALLDIR_NATIVE_DOC/html \
+         --pdfdir=$INSTALLDIR_NATIVE_DOC/pdf \
+-        --enable-languages=c,c++ \
++        --enable-languages=c,c++,d \
+         --enable-plugins \
+         --disable-decimal-float \
+         --disable-libffi \
+@@ -430,6 +430,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
+         --disable-libquadmath \
+         --disable-libssp \
+         --disable-libstdcxx-pch \
++        --disable-libphobos \
+         --disable-nls \
+         --disable-shared \
+         --disable-threads \
+@@ -480,7 +481,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
+ 
+     $SRCDIR/$GCC/configure --target=$TARGET \
+         --prefix=$BUILDDIR_NATIVE/target-libs \
+-        --enable-languages=c,c++ \
++        --enable-languages=c,c++,d \
+         --disable-decimal-float \
+         --disable-libffi \
+         --disable-libgomp \
+@@ -489,6 +490,7 @@ if [ "x$skip_native_build" != "xyes" ] ; then
+         --disable-libssp \
+         --disable-libstdcxx-pch \
+         --disable-libstdcxx-verbose \
++        --disable-libphobos \
+         --disable-nls \
+         --disable-shared \
+         --disable-threads \
+@@ -776,7 +778,7 @@ if [ "x$skip_mingw32" != "xyes" ] ; then
+         --mandir=$INSTALLDIR_MINGW_DOC/man \
+         --htmldir=$INSTALLDIR_MINGW_DOC/html \
+         --pdfdir=$INSTALLDIR_MINGW_DOC/pdf \
+-        --enable-languages=c,c++ \
++        --enable-languages=c,c++,d \
+         --enable-mingw-wildcard \
+         --disable-decimal-float \
+         --disable-libffi \
+@@ -785,6 +787,7 @@ if [ "x$skip_mingw32" != "xyes" ] ; then
+         --disable-libquadmath \
+         --disable-libssp \
+         --disable-libstdcxx-pch \
++        --disable-libphobos \
+         --disable-nls \
+         --disable-shared \
+         --disable-threads \
