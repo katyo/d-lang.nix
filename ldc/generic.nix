@@ -1,5 +1,5 @@
 { version, ldcSha256 }:
-{ stdenv, fetchurl, cmake, ninja, llvm_6, llvm_10, curl, tzdata
+{ stdenv, fetchurl, cmake, ninja, llvm_6, llvm_11, curl, tzdata
 , libconfig, lit, gdb, unzip, darwin, bash, python
 , callPackage, makeWrapper, runCommand, targetPackages
 , ldcBootstrap ? callPackage ./bootstrap.nix { }
@@ -69,7 +69,7 @@ stdenv.mkDerivation rec {
     llvm_6
   ]
   ++ stdenv.lib.optionals (!stdenv.hostPlatform.isDarwin) [
-    llvm_10
+    llvm_11
     # https://github.com/NixOS/nixpkgs/pull/36378#issuecomment-385034818
     gdb
   ];

@@ -2,7 +2,7 @@ diff --git a/runtime/druntime/src/core/stdc/config.d b/runtime/druntime/src/core
 index 3bcb8efc..05bea209 100644
 --- a/runtime/druntime/src/core/stdc/config.d
 +++ b/runtime/druntime/src/core/stdc/config.d
-@@ -144,3 +144,34 @@ else version (Posix)
+@@ -144,6 +144,37 @@ else version (Posix)
      alias ulong cpp_ulonglong;
    }
  }
