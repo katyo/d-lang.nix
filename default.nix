@@ -1,4 +1,5 @@
 self: super: rec {
+  dmd = super.callPackage ./dmd {};
   dcd = super.callPackage ./dcd.nix {};
   ldc = super.callPackage ./ldc {};
   adrdox = super.callPackage ./adrdox.nix {};
