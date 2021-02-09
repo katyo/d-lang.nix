@@ -6,8 +6,8 @@
 
 stdenv.mkDerivation rec {
   pname = "gcc-arm-embedded";
-  version = "9-2020-q4-major";
-  subdir = "9-2020-q4";
+  version = "10-2021-q1-update";
+  subdir = "10-2020-q4";
 
   suffix = {
     aarch64-linux = "aarch64-linux";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url = "https://github.com/katyo/d-lang.nix/releases/download/${pname}-${subdir}/gcc-arm-none-eabi-${version}-${suffix}.tar.bz2";
     sha256 = {
-      x86_64-linux = "04kzwz2kdkb9mwvwws2vxzyjc1gnvvllmjhyghrrk8mm8mdgpv6i";
+      x86_64-linux = "166yr6vjl4p0ncyzhb7s900h4j6ix020akvzi4h9fvg3zqsjnfkb";
     }.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
   };
 
